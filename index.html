@@ -1,29 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- PROPER HEAD SECTION FOR MOBILE DEVICES AND SEO -->
 <head>
+    <!-- Metadata: CHARACTER ENCODING: Ensures proper display of special characters across all browsers -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your page description here">
-    <title>Document</title>
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
     
+    <!-- VIEWPORT META TAG: Makes the webpage responsive on mobile devices by setting width to device width and initial zoom to 1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO META TAG - DESCRIPTION: Provides a concise description of the page content for search engines, improving search result snippets and click-through rates -->
+    <meta name="description" content="College Event Registration System - Register for campus events, workshops, and activities. Secure online registration with real-time availability and instant confirmation.">
+    
+    <!-- SEO META TAG - KEYWORDS: Helps search engines understand the main topics of the page, improving discoverability for relevant searches -->
+    <meta name="keywords" content="college events, campus registration, student activities, event booking, university workshops, college seminars">
+    
+    <!-- SEO META TAG - AUTHOR: Identifies the page creator for search engines and browsers -->
+    <meta name="author" content="Ross Miguel Luna">
+    
+    <!-- GEO META TAG 1: Specifies geographical location (latitude, longitude) to help search engines understand the physical location of the service -->
+    <meta name="geo.position" content="34.0522;-118.2437">
+    
+    <!-- GEO META TAG 2: Identifies the region/location name for local search optimization -->
+    <meta name="geo.placename" content="Los Angeles, California">
+    
+    <!-- GEO META TAG 3: Specifies the country code for international search engine optimization -->
+    <meta name="geo.region" content="US-CA">
+    
+    <!-- BROWSER TAB TITLE: Displays the page name in the browser tab -->
+    <title>Campus Events - Event Registration System</title>
+    
+    <!-- FAVICON ICON: Displays a custom icon in the browser tab for brand recognition -->
+    <link rel="icon" type="favicon.ico" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- HEADER BLOCK ELEMENT: Contains the main heading and site branding (BLOCK ELEMENT EXAMPLE) -->
     <header>
-        <h1>Welcome to My Website</h1>
+        <!-- HTML FORMATTING EXAMPLE: <strong> tag for emphasis on important text -->
+        <h1><strong>College Event Registration System</strong></h1>
+        <p>Sponsored by: Campus Events Office</p>
+        <p>Project Manager: Ross Miguel Luna</p>
     </header>
 
+    <!-- NAVIGATION BLOCK ELEMENT: Provides links to different pages (SCHEMATIC STRUCTURE ELEMENT) -->
+    <!-- NAVIGATION IDENTIFIED: This nav element contains links to navigate between pages -->
+    <nav>
+        <h2>Site Navigation</h2>
+        <ul>
+            <!-- RELATIVE URL IDENTIFIED: Links to pages within the same website directory structure -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Browse Events</a></li>
+            <li><a href="registration.html">Register for Event</a></li>
+            <li><a href="confirmation.html">Confirmation</a></li>
+            <li><a href="about.html">About Us</a></li>
+            
+            <!-- ABSOLUTE URL IDENTIFIED: Complete URL with protocol and domain pointing to external resource -->
+            <li><a href="https://www.example.edu/campus-events">Campus Events Office</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT SECTION (BLOCK ELEMENT) -->
     <main>
-        <p>Hello, world!</p>
+        <!-- SECTION BLOCK ELEMENT: Groups related content together -->
+        <section>
+            <h2>Welcome to Campus Event Registration</h2>
+            
+            <!-- PARAGRAPH BLOCK ELEMENT: Contains text content -->
+            <p>
+                Our event registration system allows students to easily browse and register for campus events, 
+                workshops, seminars, and activities. The system provides real-time availability, secure payment 
+                processing, and instant confirmation receipts.
+            </p>
+
+            <!-- DIV BLOCK ELEMENT: Generic container for grouping content -->
+            <div>
+                <h3>System Features</h3>
+                
+                <!-- UNORDERED LIST: Displays features in bullet point format -->
+                <ul>
+                    <li>Browse available campus events by category and date</li>
+                    <li>View event details including location, time, and capacity</li>
+                    <li>Secure online registration with payment processing</li>
+                    <li>Real-time inventory updates to show available spots</li>
+                    <li>Instant email confirmation and digital receipts</li>
+                    <li>Mobile-friendly interface for registration on any device</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- IMAGE/MEDIA ELEMENT WITH ACCESSIBILITY -->
+        <section>
+            <h2>Featured Events</h2>
+            
+            <!-- IMAGE ELEMENT: Displays visual content with src, alt (for accessibility), width, and height attributes -->
+            <!-- ALT ATTRIBUTE: Provides alternative text description for screen readers and accessibility (ACCESSIBILITY FEATURE) -->
+            <img src="images/campus-events-banner.jpg" 
+                 alt="Students attending a campus workshop event with presentations and networking activities" 
+                 width="800" 
+                 height="400">
+            
+            <p>Join hundreds of students at our upcoming events designed to enhance your college experience!</p>
+        </section>
+
+        <!-- TABLE ELEMENT: Displays structured data in rows and columns -->
+        <section>
+            <h2>Featured Upcoming Events</h2>
+            <p>Check out these exciting events happening on campus:</p>
+            
+            <table border="1">
+                <caption>Spring 2026 Campus Events</caption>
+                
+                <!-- TABLE HEADER -->
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Capacity</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                
+                <!-- TABLE BODY -->
+                <tbody>
+                    <tr>
+                        <td>Tech Career Fair 2026</td>
+                        <td>March 15, 2026</td>
+                        <td>10:00 AM - 4:00 PM</td>
+                        <td>Student Union Hall</td>
+                        <td>500 students</td>
+                        <td>Meet with leading technology companies and explore career opportunities. Bring your resume and dress professionally!</td>
+                    </tr>
+
+                    <tr>
+                        <td>Research Symposium 2026</td>
+                        <td>March 28, 2026</td>
+                        <td>9:00 AM - 5:00 PM</td>
+                        <td>Science Building, Rooms 101-110</td>
+                        <td>300 students</td>
+                        <td>Showcase your research and learn from fellow students across all disciplines. Poster presentations, oral sessions, and keynote speakers.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Spring Music Festival</td>
+                        <td>April 2, 2026</td>
+                        <td>6:00 PM - 10:00 PM</td>
+                        <td>Campus Green</td>
+                        <td>1000 students</td>
+                        <td>Enjoy live performances from student bands and local artists. Food trucks and refreshments will be available.</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ARTICLE BLOCK ELEMENT: Self-contained content -->
+        <article>
+            <h2>How the Registration System Works</h2>
+            
+            <h3>System Functionality</h3>
+            <ol>
+                <li><strong>Browse Events:</strong> View all available campus events with detailed information</li>
+                <li><strong>Select Event:</strong> Choose your desired event and check availability</li>
+                <li><strong>Register:</strong> Complete the registration form with your student information</li>
+                <li><strong>Payment Processing:</strong> Submit payment through our secure payment processor</li>
+                <li><strong>Confirmation:</strong> Receive instant confirmation and digital receipt via email</li>
+                <li><strong>Inventory Update:</strong> System automatically updates available spots in real-time</li>
+            </ol>
+
+            <h3>System Architecture</h3>
+            <p>
+                The event registration system uses a <em>client-server architecture</em> where the registration 
+                terminal communicates with backend systems including the event database, payment processor, 
+                and email confirmation service.
+            </p>
+        </article>
+
+        <!-- ASIDE BLOCK ELEMENT: Tangentially related content -->
+        <aside>
+            <h3>System Requirements</h3>
+            <p>
+                <strong>User Requirements:</strong> Students must have basic computer skills and a valid 
+                student email address. Minimal training is required to use the system.
+            </p>
+            <p>
+                <strong>Technical Requirements:</strong> The system operates on Windows Operating System 
+                with network connectivity to the event database and payment processing systems.
+            </p>
+        </aside>
+
+        <!-- BLOCKQUOTE ELEMENT: Displays quoted content -->
+        <blockquote>
+            <p>
+                "The event registration system has streamlined our campus activities management, 
+                providing students with easy access to hundreds of enriching experiences throughout 
+                the academic year."
+            </p>
+            <cite>- Campus Activities Director</cite>
+        </blockquote>
+
+        <!-- DETAILS AND SUMMARY ELEMENTS: Interactive disclosure widget -->
+        <details>
+            <summary>Frequently Asked Questions</summary>
+            <dl>
+                <dt><strong>What payment methods are accepted?</strong></dt>
+                <dd>We accept all major credit cards, debit cards, and student account billing.</dd>
+                
+                <dt><strong>Can I get a refund if I can't attend?</strong></dt>
+                <dd>Refunds are available up to 48 hours before the event start time.</dd>
+                
+                <dt><strong>How do I know my registration is confirmed?</strong></dt>
+                <dd>You will receive an instant email confirmation with your registration details and receipt.</dd>
+            </dl>
+        </details>
     </main>
 
+    <!-- FOOTER BLOCK ELEMENT: Contains contact information and site information -->
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+        <h3>Contact Information</h3>
+        <address>
+            Campus Event Registration Office<br>
+            Student Activities Center, Room 105<br>
+            University Campus, Los Angeles, CA 90001<br>
+            Phone: (555) 123-4567<br>
+            Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="197c6f7c776d6a597a7874696c6a377c7d6c">[email&#160;protected]</a>
+        </address>
+        
+        <p>
+            <small>
+                &copy; 2026 College Event Registration System | Project Manager: Ross Miguel Luna | 
+                Sponsored by Campus Events Office
+            </small>
+        </p>
+        
+        <p>
+            <small>
+                System Version 1.0 | Created: January 19, 2026 | 
+                <a href="privacy.html">Privacy Policy</a> |
