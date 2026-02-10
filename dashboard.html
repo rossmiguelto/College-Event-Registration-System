@@ -1,29 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- ANNOTATION: GEO Element 1 - The lang attribute specifies the document language for international accessibility -->
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ANNOTATION: GEO Element 2 - UTF-8 charset supports international characters and symbols -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your page description here">
-    <title>Document</title>
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- ANNOTATION: GEO Element 3 - Viewport meta tag ensures proper display on mobile devices globally -->
+    <title>Analytics Dashboard - College Event Registration System</title>
 </head>
 <body>
-    
+    <!-- ANNOTATION: Navigation - This navigation bar provides links to all major sections of the website -->
+    <nav>
+        <!-- ANNOTATION: Relative URL - These links use relative paths to navigate within the website directory structure -->
+        <a href="index.html">Home</a> | 
+        <a href="events.html">Events</a> | 
+        <a href="register.html">Register</a> | 
+        <a href="dashboard.html">Dashboard</a> | 
+        <a href="about.html">About</a> | 
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- ANNOTATION: Block Element - The <header> element is a block-level element that spans the full width -->
     <header>
-        <h1> Dashboard </h1>
+        <h1>Event Registration Analytics Dashboard</h1>
+        <!-- ANNOTATION: HTML Formatting - The <em> tag provides italic formatting for emphasis -->
+        <p><em>Real-time insights into campus event engagement and registration trends</em></p>
     </header>
 
+    <!-- ANNOTATION: Schematic Structure Element - The <main> element defines the main content area of the page -->
     <main>
-        <p>Hello, world!</p>
+        <!-- Dashboard Overview Section -->
+        <section>
+            <h2>Dashboard Overview</h2>
+            <p>
+                Welcome to the Analytics Dashboard. This page provides comprehensive data analysis and visualizations 
+                for event registration patterns, student engagement metrics, and system performance indicators. 
+                Use the insights below to make data-driven decisions about event planning and resource allocation.
+            </p>
+        </section>
+
+        <!-- Key Performance Indicators Section -->
+        <section>
+            <h2>Key Performance Indicators (KPIs)</h2>
+            <p><strong>Summary metrics for the current semester</strong></p>
+            
+            <!-- Placeholder for KPI Cards -->
+            <div>
+                <h3>Quick Statistics</h3>
+                <p>[PLACEHOLDER: Python will generate dynamic KPI cards showing:]</p>
+                <ul>
+                    <li>Total Events Created: XXX</li>
+                    <li>Total Registrations: XXX</li>
+                    <li>Active Users: XXX</li>
+                    <li>Average Attendance Rate: XX%</li>
+                    <li>Most Popular Event Category: XXXXX</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Event Registration Trends Section -->
+        <section>
+            <h2>Event Registration Trends</h2>
+            
+            <!-- Placeholder for Line Graph -->
+            <div>
+                <h3>Monthly Registration Volume</h3>
+                <p>[PLACEHOLDER: Python Matplotlib/Plotly Line Graph]</p>
+                <p>
+                    This graph will display the number of event registrations over the past 12 months, 
+                    showing seasonal trends and identifying peak registration periods. The visualization 
+                    will help predict future registration patterns and optimize event scheduling.
+                </p>
+                <!-- Image placeholder for graph -->
+                <img src="images/registration-trends-graph.png" 
+                     alt="Line graph showing monthly event registration trends over the past year with seasonal peaks and valleys" 
+                     width="800" 
+                     height="400">
+            </div>
+
+            <!-- Placeholder for Bar Chart -->
+            <div>
+                <h3>Registrations by Event Category</h3>
+                <p>[PLACEHOLDER: Python Bar Chart using Matplotlib]</p>
+                <p>
+                    Bar chart comparing registration numbers across different event categories 
+                    (Academic, Cultural, Sports, Social, Career Development, Workshops).
+                </p>
+            </div>
+        </section>
+
+        <!-- Student Engagement Analysis Section -->
+        <section>
+            <h2>Student Engagement Analysis</h2>
+            
+            <!-- Placeholder for Pie Chart -->
+            <div>
+                <h3>Event Attendance Distribution</h3>
+                <p>[PLACEHOLDER: Python Pie Chart - Attendance Rate Categories]</p>
+                <p>
+                    This pie chart will show the distribution of events by attendance rate:
+                    High Attendance (80-100%), Medium Attendance (50-79%), Low Attendance (Below 50%).
+                </p>
+            </div>
+
+            <!-- Placeholder for Heatmap -->
+            <div>
+                <h3>Registration Activity Heatmap</h3>
+                <p>[PLACEHOLDER: Python Seaborn Heatmap]</p>
+                <p>
+                    A heatmap showing registration activity by day of week and time of day. 
+                    This will help identify optimal times for scheduling events based on when 
+                    students are most likely to register.
+                </p>
+            </div>
+        </section>
+
+        <!-- Event Performance Metrics Section -->
+        <section>
+            <h2>Event Performance Metrics</h2>
+            
+            <!-- ANNOTATION: Table - This table structure will display detailed event performance data -->
+            <table border="1">
+                <caption>Top 10 Events by Registration Count (Current Semester)</caption>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Event Name</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Registrations</th>
+                        <th>Capacity</th>
+                        <th>Attendance Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>[PLACEHOLDER: Event data from database]</td>
+                        <td>Academic</td>
+                        <td>2026-02-15</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>[PLACEHOLDER: Event data from database]</td>
+                        <td>Cultural</td>
+                        <td>2026-02-20</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>[PLACEHOLDER: Event data from database]</td>
+                        <td>Sports</td>
+                        <td>2026-02-25</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                        <td>XX%</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">
+                            <em>Additional rows will be populated dynamically from Python data analysis</em>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>[PLACEHOLDER: Python will query the database and populate this table with actual event data]</p>
+        </section>
+
+        <!-- Demographic Analysis Section -->
+        <section>
+            <h2>User Demographics</h2>
+            
+            <div>
+                <h3>Registrations by Academic Program</h3>
+                <p>[PLACEHOLDER: Python Horizontal Bar Chart]</p>
+                <p>
+                    Analysis of event registrations broken down by student academic programs 
+                    (Computer Science, Engineering, Business, Arts, Sciences, etc.).
+                </p>
+            </div>
+
+            <div>
+                <h3>Registrations by Year of Study</h3>
+                <p>[PLACEHOLDER: Python Stacked Bar Chart]</p>
+                <p>
+                    Distribution showing registration patterns across different year levels 
+                    (First Year, Second Year, Third Year, Fourth Year, Graduate).
+                </p>
+            </div>
+        </section>
+
+        <!-- Time-Based Analysis Section -->
+        <section>
+            <h2>Time-Based Analysis</h2>
+            
+            <div>
+                <h3>Average Registration Time Before Event</h3>
+                <p>[PLACEHOLDER: Python Histogram]</p>
+                <p>
+                    Histogram showing how far in advance students typically register for events. 
+                    This helps optimize notification timing and registration deadlines.
+                </p>
+            </div>
+
+            <div>
+                <h3>Peak Registration Hours</h3>
+                <p>[PLACEHOLDER: Python Time Series Analysis]</p>
+                <p>
+                    Analysis of registration timestamps to identify peak hours during the day 
+                    when students are most active on the platform.
+                </p>
+            </div>
+        </section>
+
+        <!-- Predictive Analytics Section -->
+        <section>
+            <h2>Predictive Analytics &amp; Forecasting</h2>
+            
+            <div>
+                <h3>Predicted Event Attendance</h3>
+                <p>[PLACEHOLDER: Python Machine Learning Model Output]</p>
+                <p>
+                    Using historical data and machine learning algorithms (Linear Regression, Random Forest), 
+                    this section will predict expected attendance for upcoming events based on factors like 
+                    category, time, day of week, and historical performance.
+                </p>
+            </div>
+
+            <div>
+                <h3>Registration Forecast (Next 3 Months)</h3>
+                <p>[PLACEHOLDER: Python Forecasting Graph using Prophet or ARIMA]</p>
+                <p>
+                    Time series forecast showing expected registration volumes for the next quarter, 
+                    helping administrators plan capacity and resources.
+                </p>
+            </div>
+        </section>
+
+        <!-- Comparison Analysis Section -->
+        <section>
+            <h2>Comparative Analysis</h2>
+            
+            <div>
+                <h3>Year-over-Year Comparison</h3>
+                <p>[PLACEHOLDER: Python Grouped Bar Chart]</p>
+                <p>
+                    Side-by-side comparison of registration metrics between the current academic year 
+                    and the previous year, showing growth trends and areas of improvement.
+                </p>
+            </div>
+
+            <div>
+                <h3>Event Category Performance Benchmarking</h3>
+                <p>[PLACEHOLDER: Python Radar Chart]</p>
+                <p>
+                    Multi-dimensional comparison of different event categories across metrics like 
+                    average registrations, attendance rate, student satisfaction, and cancellation rate.
+                </p>
+            </div>
+        </section>
+
+        <!-- Statistical Summary Section -->
+        <section>
+            <h2>Statistical Summary</h2>
+            
+            <div>
+                <h3>Descriptive Statistics</h3>
+                <p>[PLACEHOLDER: Python Pandas DataFrame Summary]</p>
+                <p>Statistical measures including:</p>
+                <ul>
+                    <li>Mean registrations per event: XX.XX</li>
+                    <li>Median registrations per event: XX</li>
+                    <li>Standard deviation: XX.XX</li>
+                    <li>Registration rate variance: XX.XX</li>
+                    <li>Correlation between event capacity and registrations: X.XX</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Registration Success Rate</h3>
+                <p>[PLACEHOLDER: Python Calculation and Visualization]</p>
+                <p>
+                    Analysis of successful registrations vs. attempted registrations, 
+                    including identification of common failure points in the registration process.
+                </p>
+            </div>
+        </section>
+
+        <!-- Export and Reports Section -->
+        <section>
+            <h2>Export Options &amp; Reports</h2>
+            
+            <p>
+                <!-- ANNOTATION: Absolute URL - External link to data visualization library documentation -->
+                For more information about data visualization best practices, visit 
+                <a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank">
+                    Matplotlib Tutorials
+                </a>
+            </p>
+            
+            <div>
+                <h3>Available Reports</h3>
+                <ul>
+                    <li>[PLACEHOLDER: Button to export Monthly Analytics Report (PDF)]</li>
+                    <li>[PLACEHOLDER: Button to export Event Performance CSV]</li>
+                    <li>[PLACEHOLDER: Button to export User Engagement Summary (Excel)]</li>
+                    <li>[PLACEHOLDER: Button to export Custom Date Range Report]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Data Refresh Information -->
+        <section>
+            <h2>Data Information</h2>
+            <p>
+                <strong>Last Updated:</strong> [PLACEHOLDER: Python datetime.now()]<br>
+                <strong>Data Source:</strong> College Event Registration Database<br>
+                <strong>Refresh Frequency:</strong> Real-time (updates every 5 minutes)<br>
+                <strong>Data Range:</strong> September 2025 - February 2026
+            </p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 College Event Registration System Analytics Dashboard</p>
+        <p>Data analysis powered by Python, Pandas, Matplotlib, and Seaborn</p>
     </footer>
-
 </body>
 </html>
