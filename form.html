@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for college events online - quick and easy registration">
+    <title>Event Registration - College Event Registration System</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="view.html">View Events</a></li>
+            <li><a href="form.html">Register for Events</a></li>
+            <li><a href="dashbooard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <header>
+        <h1>Event Registration</h1>
+        <p><strong>Register for Campus Events</strong></p>
+        <p><em>Complete the form below to register for an event</em></p>
+        <hr>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            <p>
+                Please fill out all required fields marked with <strong>*</strong> to complete your registration. 
+                You will receive a confirmation email within 24 hours.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- FORM: Student registration form -->
+        <section>
+            <!-- FORM START CODE: <form> tag with action and method attributes (2 points) -->
+            <form action="confirmation.html" method="get">
+                <fieldset>
+                    <legend><strong>Personal Information</strong></legend>
+                    
+                    <!-- INPUT #1: type="text" for First Name (2 points) -->
+                    <!-- EXPLANATION: text type is appropriate for collecting names as short, single-line text -->
+                    <p>
+                        <label for="firstname">First Name: <strong>*</strong></label><br>
+                        <input type="text" id="firstname" name="firstname" size="30" required>
+                    </p>
+                    
+                    <p>
+                        <label for="lastname">Last Name: <strong>*</strong></label><br>
+                        <input type="text" id="lastname" name="lastname" size="30" required>
+                    </p>
+                    
+                    <p>
+                        <label for="studentid">Student ID: <strong>*</strong></label><br>
+                        <input type="text" id="studentid" name="studentid" size="20" required>
+                    </p>
+                    
+                    <!-- INPUT #2: type="email" for email address (2 points) -->
+                    <!-- EXPLANATION: email type is appropriate because it validates email format (requires @ symbol) -->
+                    <!-- and provides email-specific keyboard on mobile devices -->
+                    <p>
+                        <label for="email">College Email: <strong>*</strong></label><br>
+                        <input type="email" id="email" name="email" size="40" required>
+                    </p>
+                    
+                    <!-- INPUT #3: type="tel" for phone number (2 points) -->
+                    <!-- EXPLANATION: tel type is appropriate for phone numbers, provides numeric keyboard on mobile -->
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" size="20">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Event Selection</strong></legend>
+                    
+                    <!-- INPUT #4: <select> dropdown for event selection (2 points) -->
+                    <!-- EXPLANATION: select/dropdown is appropriate when choosing from a predefined list of 8 options -->
+                    <!-- Saves space compared to 8 radio buttons and prevents typos in event names -->
+                    <p>
+                        <label for="event">Select Event: <strong>*</strong></label><br>
+                        <select id="event" name="event" required>
+                            <option value="">-- Choose an Event --</option>
+                            <option value="tech-career-fair">Tech Career Fair 2026 - March 15, 2026</option>
+                            <option value="spring-music">Research Symposium 2026 - March 28, 2026</option>
+                            <option value="research-symposium">Spring Music Festival - April 2, 2026</option>
+                        </select>
+                    </p>
+                    
+                    <!-- INPUT #5: type="number" for guest count (2 points) -->
+                    <!-- EXPLANATION: number type is appropriate for numeric data with constraints (min/max) -->
+                    <!-- Provides increment/decrement buttons and prevents non-numeric input -->
+                    <p>
+                        <label for="guests">Number of Guests (if allowed):</label><br>
+                        <input type="number" id="guests" name="guests" min="0" max="3" value="0">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Additional Information</strong></legend>
+                    
+                    <!-- SINGLE SELECTION QUESTION: Radio buttons for academic year (5 points) -->
+                    <!-- INPUT TYPE: radio - Appropriate because user can only be in ONE academic year -->
+                    <!-- Radio buttons are correct for 5+ options where only one answer is allowed -->
+                    <p>
+                        <label for="year">Academic Year:</label><br>
+                        <input type="radio" id="freshman" name="year" value="freshman">
+                        <label for="freshman">Freshman</label><br>
+                        
+                        <input type="radio" id="sophomore" name="year" value="sophomore">
+                        <label for="sophomore">Sophomore</label><br>
+                        
+                        <input type="radio" id="junior" name="year" value="junior">
+                        <label for="junior">Junior</label><br>
+                        
+                        <input type="radio" id="senior" name="year" value="senior">
+                        <label for="senior">Senior</label><br>
+                        
+                        <input type="radio" id="graduate" name="year" value="graduate">
+                        <label for="graduate">Graduate Student</label><br>
+                    </p>
+                    
+                    <p>
+                        <label for="major">Major/Program:</label><br>
+                        <input type="text" id="major" name="major" size="40">
+                    </p>
+                    
+                    <!-- MULTIPLE SELECTION QUESTION: Checkboxes for dietary restrictions (counts as selection question) -->
+                    <!-- INPUT TYPE: checkbox - Appropriate because users can have MULTIPLE dietary restrictions -->
+                    <p>
+                        <strong>Dietary Restrictions (for food events):</strong><br>
+                        <input type="checkbox" id="vegetarian" name="diet" value="vegetarian">
+                        <label for="vegetarian">Vegetarian</label><br>
+                        
+                        <input type="checkbox" id="vegan" name="diet" value="vegan">
+                        <label for="vegan">Vegan</label><br>
+                        
+                        <input type="checkbox" id="gluten-free" name="diet" value="gluten-free">
+                        <label for="gluten-free">Gluten-Free</label><br>
+                        
+                        <input type="checkbox" id="no-restrictions" name="diet" value="none">
+                        <label for="no-restrictions">No Restrictions</label><br>
+                    </p>
+                    
+                    <!-- OPEN-ENDED QUESTION: textarea for long-form text responses (5 points) -->
+                    <!-- This allows unlimited text input for accessibility needs description -->
+                    <p>
+                        <label for="accessibility">Accessibility Needs:</label><br>
+                        <textarea id="accessibility" name="accessibility" rows="4" cols="50" 
+                                  placeholder="Please describe any accessibility accommodations you may need..."></textarea>
+                    </p>
+                    
+                    <p>
+                        <label for="comments">Additional Comments or Questions:</label><br>
+                        <textarea id="comments" name="comments" rows="4" cols="50" 
+                                  placeholder="Enter any questions or special requests here..."></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Confirmation</strong></legend>
+                    
+                    <p>
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">
+                            <strong>*</strong> I agree to attend the event if registered and understand that 
+                            no-shows may affect my ability to register for future events.
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">
+                            I would like to receive email updates about future campus events.
+                        </label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <p>
+                    <input type="submit" value="Submit Registration">
+                    <input type="reset" value="Clear Form">
+                </p>
+            <!-- FORM END CODE: </form> closing tag (2 points) -->
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>What Happens Next?</h2>
+            <ol>
+                <li><strong>Confirmation Email:</strong> You will receive a confirmation email at the address you provided within 24 hours</li>
+                <li><strong>Event Reminder:</strong> A reminder will be sent 48 hours before the event</li>
+                <li><strong>Check-in:</strong> Bring your student ID to check in at the event</li>
+                <li><strong>Attendance:</strong> Your attendance will be recorded for future event priority</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Need Help?</h2>
+            <p>
+                If you have questions about registration or need assistance, please contact the Campus Events Office:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:CampusEvents@gmail.com">CampusEvents@gmail.com</a></li>
+                <li><strong>Phone:</strong> (555) 123-4567</li>
+                <li><strong>Office:</strong> Student Union, Room 205</li>
+                <li><strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    
+        <p><small>&copy; 2026 College Event Registration System</small></p>
+        
+    </body>
+    </html>
+          
