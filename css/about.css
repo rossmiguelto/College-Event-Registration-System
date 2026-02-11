@@ -479,3 +479,18 @@ section p:has(strong) {
         padding-top: 0;
     }
 }
+.creator-images {
+    display: flex;       /* place images side by side */
+    gap: 20px;           /* spacing between images */
+    flex-wrap: wrap;     /* allow wrapping if screen is small */
+}
+
+.creator-images img {
+    width: 45%;          /* fit 2 images side by side */
+    height: auto;        /* maintain aspect ratio */
+}
+.creator-images img:only-child {
+    width: 90%;          /* make a single image bigger */
+}
+
+
