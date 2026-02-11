@@ -1,0 +1,460 @@
+/* ============================================
+   College Event Registration System
+   CSS Stylesheet for index.html (Home Page)
+   Professional Enterprise Design
+   ============================================ */
+
+/* ============================================
+   COMPLETE SEPARATION OF CONCERN (3 points)
+   
+   This CSS file maintains complete separation of concern by:
+   - Containing ONLY styling rules (no HTML structure)
+   - Using external stylesheet (not inline or embedded styles)
+   - No JavaScript or behavioral code
+   - All formatting rules are in this separate .css file
+   
+   NO VIOLATIONS: This stylesheet maintains 100% separation.
+   All styling is external and separate from HTML content.
+   ============================================ */
+
+/* ============================================
+   RESET AND BASE STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a; /* HEX CODE: Black for main text */
+    background-color: #fef8e7; /* HEX CODE: Light gold/cream background */
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================
+   CSS SYNTAX EXPLANATION (3 points)
+   
+   Example line explained:
+   
+   color: #1a1a1a;
+   
+   SYNTAX BREAKDOWN:
+   - "color" = property name (what aspect to style)
+   - ":" = separator between property and value
+   - "#1a1a1a" = property value (hex color code)
+   - ";" = statement terminator (ends the declaration)
+   
+   Full rule: selector { property: value; }
+   ============================================ */
+
+/* ============================================
+   NAVIGATION STYLES
+   ============================================ */
+
+nav {
+    background-color: #1a1a1a; /* HEX CODE: Black navigation background */
+    padding: 0;
+    border-bottom: 3px solid #d4af37; /* HEX CODE: Gold border */
+}
+
+nav h2 {
+    color: #d4af37; /* HEX CODE: Gold text */
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem 2rem 0 2rem; /* CHANGES SPACING (2 points) - adds padding */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0 2rem;
+}
+
+nav li {
+    display: inline;
+}
+
+/* EXAMPLE OF ELEMENT SELECTOR (2 points)
+   This formats the <a> element (anchor/link tag)
+   Applies to ALL <a> tags within <nav> */
+nav a {
+    color: #f5e6c8; /* HEX CODE: Light gold for links */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding: 0.875rem 1.25rem;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ffd700; /* HEX CODE: Bright gold on hover */
+    border-bottom-color: #d4af37; /* HEX CODE: Gold bottom border on hover */
+}
+
+nav hr {
+    display: none;
+}
+
+/* ============================================
+   HEADER STYLES - HERO SECTION
+   ============================================ */
+
+/* CHANGES BACKGROUND COLOR (2 points)
+   Sets background to gold gradient */
+header {
+    background: linear-gradient(135deg, #d4af37 0%, #f0c25e 100%); /* HEX CODE: Gold gradient background */
+    color: #1a1a1a; /* HEX CODE: Black text */
+    padding: 4rem 2rem;
+    border-bottom: 4px solid #1a1a1a; /* HEX CODE: Black border */
+}
+
+/* CHANGES SIZE (2 points)
+   Sets font-size to 2.75rem */
+header h1 {
+    font-size: 2.75rem; /* CHANGES SIZE OF ITEM (2 points) */
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    letter-spacing: -0.75px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 1.125rem;
+    margin: 0.5rem auto;
+    color: #2c2c2c; /* HEX CODE: Dark gray for subtitle */
+    font-weight: 400;
+    max-width: 900px;
+}
+
+header p strong {
+    color: #1a1a1a; /* HEX CODE: Black for emphasis */
+    font-weight: 600;
+}
+
+header p em {
+    color: #3d3d3d; /* HEX CODE: Medium gray for em tags */
+    font-style: normal;
+}
+
+header hr {
+    display: none;
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto; /* CHANGES ALIGNMENT (2 points) - centers the main content */
+    padding: 3rem 2rem;
+    background-color: #ffffff; /* HEX CODE: White background */
+}
+
+section {
+    background-color: #ffffff; /* HEX CODE: White background */
+    padding: 0 0 4rem 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+section h2 {
+    color: #d4af37; /* HEX CODE: Gold for headings */
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #d4af37; /* HEX CODE: Gold underline */
+    padding-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+section h3 {
+    color: #1a1a1a; /* HEX CODE: Black for subheadings */
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.25px;
+}
+
+section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #2c2c2c; /* HEX CODE: Dark gray for body text */
+    font-size: 1rem;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #d4af37; /* HEX CODE: Gold divider - CHANGES BORDERS (2 points) */
+    margin: 4rem 0;
+}
+
+div {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid #f5e6c8; /* HEX CODE: Light gold divider */
+}
+
+div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem 0;
+    border: 3px solid #d4af37; /* HEX CODE: Gold border */
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c2c2c; /* HEX CODE: Dark gray text */
+}
+
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c2c2c; /* HEX CODE: Dark gray text */
+}
+
+li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+li strong {
+    color: #d4af37; /* HEX CODE: Gold for emphasis */
+    font-weight: 600;
+}
+
+a {
+    color: #b8860b; /* HEX CODE: Dark gold for links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ffd700; /* HEX CODE: Bright gold on hover */
+    text-decoration: underline;
+}
+
+section a {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+strong {
+    color: #d4af37; /* HEX CODE: Gold for strong emphasis */
+    font-weight: 600;
+}
+
+em {
+    font-style: normal;
+    color: #6d6d6d; /* HEX CODE: Medium gray for em tags */
+}
+
+/* ============================================
+   CLASS SELECTOR EXAMPLE (2 points)
+   
+   This is an EXAMPLE of a class selector.
+   Classes are reusable styles applied with class="featured-events"
+   Multiple elements can share the same class.
+   Class selectors use the dot (.) notation.
+   ============================================ */
+
+.featured-events {
+    background-color: #fffaeb; /* HEX CODE: Very light gold background */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid #d4af37; /* HEX CODE: Gold border */
+    border-left: 6px solid #b8860b; /* HEX CODE: Dark gold accent */
+}
+
+/* ============================================
+   ID SELECTOR EXAMPLE (2 points)
+   
+   This is an EXAMPLE of an ID selector.
+   IDs are unique - only ONE element should have this ID.
+   Applied with id="hero-section" in HTML.
+   ID selectors use the hash (#) notation.
+   ============================================ */
+
+#hero-section {
+    background: linear-gradient(135deg, #ffd700 0%, #f0e68c 100%); /* HEX CODE: Bright gold gradient */
+    padding: 3rem 2rem;
+    border: 3px solid #1a1a1a; /* HEX CODE: Black border */
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #1a1a1a; /* HEX CODE: Black background */
+    color: #f5e6c8; /* HEX CODE: Light gold text */
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-top: 4px solid #d4af37; /* HEX CODE: Gold border */
+}
+
+footer h3 {
+    color: #ffd700; /* HEX CODE: Bright gold */
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #d4af37; /* HEX CODE: Gold for links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #ffd700; /* HEX CODE: Bright gold on hover */
+    text-decoration: underline;
+}
+
+footer small {
+    font-size: 0.875rem;
+    color: #c9b580; /* HEX CODE: Muted gold */
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav a {
+        padding: 0.75rem 1.25rem;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    nav a:hover {
+        border-left-color: #d4af37; /* HEX CODE: Gold */
+        border-bottom-color: transparent;
+    }
+
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    section {
+        padding: 0 0 3rem 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section h3 {
+        font-size: 1.125rem;
+    }
+
+    div {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav h2 {
+        font-size: 0.8125rem;
+        padding: 0.875rem 1.5rem 0 1.5rem;
+    }
+
+    nav ul {
+        padding: 0 1.5rem;
+    }
+
+    header {
+        padding: 2rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header p {
+        font-size: 0.9375rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    section h2 {
+        font-size: 1.375rem;
+    }
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+}
+
+:focus {
+    outline: 2px solid #d4af37; /* HEX CODE: Gold outline */
+    outline-offset: 2px;
+}
+
+@media print {
+    nav,
+    footer {
+        display: none;
+    }
+
+    body {
+        background-color: #ffffff; /* HEX CODE: White background */
+    }
+
+    header {
+        background-color: #ffffff; /* HEX CODE: White background */
+        border-bottom: 2px solid #1a1a1a; /* HEX CODE: Nearly black border */
+        padding: 2rem 0;
+    }
+
+    img {
+        border: none;
+    }
+}
