@@ -504,3 +504,10 @@ footer small {
         background-color: #fffaeb; /* HEX CODE: Very light gold */
     }
 }
+footer {
+    text-align: center;      /* center the text */
+    padding: 15px 0;         /* space around the text */
+    background-color: #f2f2f2; /* light grey background */
+    color: #333;             /* dark text for readability */
+    font-size: 14px;         /* slightly smaller font */
+}
