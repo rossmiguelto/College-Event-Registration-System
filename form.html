@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Metadata: CHARACTER ENCODING: Ensures proper display of special characters across all browsers -->
+    <meta charset="UTF-8">
+    
+    <!-- VIEWPORT META TAG: Makes the webpage responsive on mobile devices by setting width to device width and initial zoom to 1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO META TAG - DESCRIPTION: Provides a concise description of the page content for search engines, improving search result snippets and click-through rates -->
+    <meta name="description" content="College Event Registration System - Register for campus events, workshops, and activities. Secure online registration with real-time availability and instant confirmation.">
+    
+    <!-- SEO META TAG - KEYWORDS: Helps search engines understand the main topics of the page, improving discoverability for relevant searches -->
+    <meta name="keywords" content="college events, campus registration, student activities, event booking, university workshops, college seminars">
+    
+    <!-- SEO META TAG - AUTHOR: Identifies the page creator for search engines and browsers -->
+    <meta name="author" content="Arash Nail, Ross Miguel Luna">
+    
+    <!-- GEO META TAG 1: Specifies geographical location (latitude, longitude) to help search engines understand the physical location of the service -->
+    <meta name="geo.position" content="34.0522;-118.2437">
+    
+    <!-- GEO META TAG 2: Identifies the region/location name for local search optimization -->
+    <meta name="geo.placename" content="Los Angeles, California">
+    
+    <!-- GEO META TAG 3: Specifies the country code for international search engine optimization -->
+    <meta name="geo.region" content="US-CA">
+
+    <!-- BROWSER TAB TITLE: Displays the page name in the browser tab -->
+    <title>Event Registration - College Event Registration System</title>
+
+    <!-- FAVICON ICON: Displays a custom icon in the browser tab for brand recognition -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+     <!-- EXTERNAL CSS LINK: Connects the form.css stylesheet for page styling -->
+    <link rel="stylesheet" href="css/form.css">
+    <!-- JS LINK ANNOTATION: Links form.html to main.js for validation and dynamic features. -->
+    <script src="JavaScript/main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Register for Events</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <!-- COMPONENT 2 — FORMATTING TOGGLE: button calls darkModeToggle() to add/remove
+         the dark-mode CSS class on <body>, changing the colour scheme of the entire page. -->
+    <div style="padding:6px 12px;">
+        <button id="dark-mode-btn" style="padding:5px 12px;cursor:pointer;">🌙 Dark Mode</button>
+    </div>
+    <header>
+        <h1>Event Registration</h1>
+        <p><strong>Register for Campus Events</strong></p>
+        <p><em>Complete the form below to register for an event</em></p>
+        <hr>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            <p>
+                Please fill out all required fields marked with <strong>*</strong> You will receive an instant email confirmation with your registration details and receipt.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- FORM: Student registration form -->
+        <section>
+            <!-- FORM START CODE: <form> tag with action and method attributes (2 points) -->
+            <form id="registration-form" action="confirmation.html" method="get">
+                <!-- COMPONENT 1 & DOM ANNOTATION: #validation-messages is a <div> element.
+                     JS selects it via getElementById("validation-messages") and injects
+                     error/success HTML into it using innerHTML. Linked by id="validation-messages". -->
+                <div id="validation-messages" style="display:none; padding:10px; border:1px solid #ccc;
+                     border-radius:4px; margin-bottom:12px; background:#fff8f8;"></div>
+                <fieldset>
+                    <legend><strong>Personal Information</strong></legend>
+                    
+                    <!-- INPUT #1: type="text" for First Name (2 points) -->
+                    <!-- EXPLANATION: text type is appropriate for collecting names as short, single-line text -->
+                    <p>
+                        <label for="firstname">First Name: <strong>*</strong></label><br>
+                        <input type="text" id="firstname" name="firstname" size="30" required>
+                    </p>
+                    
+                    <p>
+                        <label for="lastname">Last Name: <strong>*</strong></label><br>
+                        <input type="text" id="lastname" name="lastname" size="30" required>
+                    </p>
+                    
+                    <p>
+                        <label for="studentid">Student ID: <strong>*</strong></label><br>
+                        <input type="text" id="studentid" name="studentid" size="20" required>
+                    </p>
+                    
+                    <!-- INPUT #2: type="email" for email address (2 points) -->
+                    <!-- EXPLANATION: email type is appropriate because it validates email format (requires @ symbol) -->
+                    <!-- and provides email-specific keyboard on mobile devices -->
+                    <p>
+                        <label for="email">College Email: <strong>*</strong></label><br>
+                        <input type="email" id="email" name="email" size="40" required>
+                    </p>
+                    
+                    <!-- INPUT #3: type="tel" for phone number (2 points) -->
+                    <!-- EXPLANATION: tel type is appropriate for phone numbers, provides numeric keyboard on mobile -->
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" size="20">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Event Selection</strong></legend>
+                    
+                    <!-- INPUT #4: <select> dropdown for event selection (2 points) -->
+                    <!-- EXPLANATION: select/dropdown is appropriate when choosing from a predefined list of 8 options -->
+                    <!-- Saves space compared to 8 radio buttons and prevents typos in event names -->
+                    <p>
+                        <label for="event">Select Event: <strong>*</strong></label><br>
+                        <select id="event" name="event" required>
+                            <option value="">-- Choose an Event --</option>
+                            <option value="tech-career-fair">Tech Career Fair 2026 - March 15, 2026</option>
+                            <option value="research-symposium">Research Symposium 2026 - March 28, 2026</option>
+                            <option value="spring-music">Spring Music Festival - April 2, 2026</option>
+                        </select>
+                    </p>
+                    <!-- COMPONENT 3 — CHANGE HTML CONTENT: updateEventDetails() writes event
+                         info into this <div> via innerHTML when the user picks from the dropdown.
+                         The 'change' event on the <select id="event"> triggers the function.
+                         DOM link: getElementById("event-details") → id="event-details" here. -->
+                    <div id="event-details" style="display:none; background:#eef4ff; padding:10px;
+                         border-left:4px solid #2a4d8f; margin:8px 0; border-radius:4px;"></div>
+
+                    <!-- INPUT #5: type="number" for guest count (2 points) -->
+                    <!-- EXPLANATION: number type is appropriate for numeric data with constraints (min/max) -->
+                    <!-- Provides increment/decrement buttons and prevents non-numeric input -->
+                    <p>
+                        <label for="guests">Number of Guests (if allowed):</label><br>
+                        <input type="number" id="guests" name="guests" min="0" max="3" value="0">
+                    </p>
+                    <!-- COMPONENT 4 — ADD / REMOVE ELEMENT: addGuestField() uses createElement()
+                         and appendChild() to inject a new <input> into #guest-names-container.
+                         removeLastGuest() uses removeChild() to delete the last one.
+                         DOM link: getElementById("guest-names-container") → id below. -->
+                    <p>
+                        <button type="button" id="add-guest-btn"
+                            style="padding:5px 10px;cursor:pointer;margin-right:6px;">+ Add Guest Name Field</button>
+                        <button type="button" id="remove-guest-btn"
+                            style="padding:5px 10px;cursor:pointer;">− Remove Last Guest</button>
+                    </p>
+                    <div id="guest-names-container"></div>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Additional Information</strong></legend>
+                    
+                    <!-- SINGLE SELECTION QUESTION: Radio buttons for academic year (5 points) -->
+                    <!-- INPUT TYPE: radio - Appropriate because user can only be in ONE academic year -->
+                    <!-- Radio buttons are correct for 5+ options where only one answer is allowed -->
+                <p>
+                    <label for="year">Academic Year:</label><br>
+                    <input type="radio" id="freshman" name="year" value="freshman" required>
+                    <label for="freshman">Freshman</label><br>
+    
+                    <input type="radio" id="sophomore" name="year" value="sophomore">
+                    <label for="sophomore">Sophomore</label><br>
+    
+                    <input type="radio" id="junior" name="year" value="junior">
+                    <label for="junior">Junior</label><br>
+    
+                    <input type="radio" id="senior" name="year" value="senior">
+                    <label for="senior">Senior</label><br>
+    
+                    <input type="radio" id="graduate" name="year" value="graduate">
+                    <label for="graduate">Graduate Student</label><br>
+                </p>
+
+                    
+                    <p>
+                        <label for="major">Major/Program:</label><br>
+                        <input type="text" id="major" name="major" size="40">
+                    </p>
+                    
+                    <!-- MULTIPLE SELECTION QUESTION: Checkboxes for dietary restrictions (counts as selection question) -->
+                    <!-- INPUT TYPE: checkbox - Appropriate because users can have MULTIPLE dietary restrictions -->
+                    <p>
+                        <strong>Dietary Restrictions (for food events):</strong><br>
+                        <input type="checkbox" id="vegetarian" name="diet" value="vegetarian">
+                        <label for="vegetarian">Vegetarian</label><br>
+                        
+                        <input type="checkbox" id="vegan" name="diet" value="vegan">
+                        <label for="vegan">Vegan</label><br>
+                        
+                        <input type="checkbox" id="gluten-free" name="diet" value="gluten-free">
+                        <label for="gluten-free">Gluten-Free</label><br>
+                        
+                        <input type="checkbox" id="no-restrictions" name="diet" value="none">
+                        <label for="no-restrictions">No Restrictions</label><br>
+                    </p>
+                    
+                    <!-- OPEN-ENDED QUESTION: textarea for long-form text responses (5 points) -->
+                    <!-- This allows unlimited text input for accessibility needs description -->
+                    <p>
+                        <label for="accessibility">Accessibility Needs:</label><br>
+                        <textarea id="accessibility" name="accessibility" rows="4" cols="50" 
+                                  placeholder="Please describe any accessibility accommodations you may need..."></textarea>
+                    </p>
+                    
+                    <p>
+                        <label for="comments">Additional Comments or Questions:</label><br>
+                        <textarea id="comments" name="comments" rows="4" cols="50" 
+                                  placeholder="Enter any questions or special requests here..."></textarea>
+                        <!-- COMPONENT 5 — ACTION ON TYPING: The #char-count span is updated live
+                             by liveCharCount() which listens on the 'keyup' event of this textarea.
+                             Linked to HTML by id="char-count" on the span below. -->
+                        <br><span id="char-count" style="font-size:0.85rem;color:#333;">0/250 characters</span>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>Confirmation</strong></legend>
+                    
+                    <p>
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">
+                            <strong>*</strong> I agree to attend the event if registered and understand that 
+                            no-shows may affect my ability to register for future events.
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">
+                            I would like to receive email updates about future campus events.
+                        </label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <p>
+                    <input type="submit" value="Submit Registration">
+                    <input type="reset" value="Clear Form">
+                </p>
+            <!-- FORM END CODE: </form> closing tag (2 points) -->
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>What Happens Next?</h2>
+            <ol>
+                <li><strong>Confirmation Email:</strong> You will receive an instant email confirmation with your registration details and receipt.</li>
+                <li><strong>Event Reminder:</strong> A reminder will be sent 48 hours before the event</li>
+                <li><strong>Check-in:</strong> Bring your student ID to check in at the event</li>
+                <li><strong>Attendance:</strong> Your attendance will be recorded for future event priority</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Need Help?</h2>
+            <p>
+                If you have questions about registration or need assistance, please contact the Campus Events Office:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#8ac9ebe7fafff9cffcefe4fef9caede7ebe3e6a4e9e5e7"><span class="__cf_email__" data-cfemail="4a092b273a3f390f3c2f243e390a2d272b232664292527">[email&#160;protected]</span></a></li>
+                <li><strong>Phone:</strong> (555) 123-4567</li>
+                <li><strong>Office:</strong> Student Union, Room 205</li>
+                <li><strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    
+
+        <footer>
+        <p>&copy; 2026 College Event Registration System</p>
+        <p>
