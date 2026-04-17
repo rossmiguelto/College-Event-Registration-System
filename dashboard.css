@@ -1,0 +1,303 @@
+/* ============================================
+   College Event Registration System
+   CSS Stylesheet for dashboard.html (Dashboard)
+   Gold and Black Theme — Part 5 update adds KPI cards
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #fef8e7;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #1a1a1a;
+    padding: 0;
+    border-bottom: 3px solid #d4af37;
+}
+
+nav h2 {
+    color: #d4af37;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem 2rem 0 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0 2rem;
+}
+
+nav li { display: inline; }
+
+nav a {
+    color: #f5e6c8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding: 0.875rem 1.25rem;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+    border-bottom-color: #d4af37;
+}
+
+nav hr { display: none; }
+
+header {
+    background: linear-gradient(135deg, #d4af37 0%, #f0c25e 100%);
+    color: #1a1a1a;
+    padding: 2.5rem 2rem;
+    border-bottom: 4px solid #1a1a1a;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+header p {
+    font-size: 1rem;
+    margin: 0.25rem auto;
+    color: #2c2c2c;
+    font-weight: 400;
+    max-width: 1400px;
+}
+
+header hr { display: none; }
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fef8e7;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border: 2px solid #d4af37;
+}
+
+section h2 {
+    color: #d4af37;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 0.5rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #2c2c2c;
+    font-size: 0.9375rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9375rem;
+    background-color: #ffffff;
+    border: 2px solid #d4af37;
+}
+
+thead tr {
+    background: linear-gradient(135deg, #d4af37 0%, #f0c25e 100%);
+    border-bottom: 3px solid #1a1a1a;
+}
+
+th {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f5e6c8;
+    transition: background-color 0.15s ease;
+}
+
+tbody tr:hover { background-color: #fffaeb; }
+
+tbody tr:last-child { border-bottom: 2px solid #d4af37; }
+
+td {
+    padding: 0.875rem 1rem;
+    color: #2c2c2c;
+    vertical-align: middle;
+}
+
+a {
+    color: #b8860b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+strong { color: #d4af37; font-weight: 600; }
+
+footer {
+    background-color: #1a1a1a;
+    color: #f5e6c8;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 3rem;
+    border-top: 4px solid #d4af37;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   KPI CARDS — Part 5 Addition
+   ANNOTATION (Separation of Concern):
+   KPI card styles are defined here in CSS only.
+   No inline styles are used for layout or colour.
+   ============================================ */
+.kpi-card {
+    background: linear-gradient(135deg, #d4af37 0%, #f0c25e 100%);
+    border: 2px solid #1a1a1a;
+    padding: 1.25rem 1.5rem;
+    min-width: 160px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.kpi-num {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
+.kpi-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #3d2b00;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.25rem;
+}
+
+/* ============================================
+   CHATBOT SECTION
+   ============================================ */
+#chatbot-section input[type="text"] {
+    border: 2px solid #d4af37;
+    background: #fffaeb;
+}
+
+#chatbot-section input[type="text"]:focus {
+    outline: 2px solid #b8860b;
+    outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media screen and (max-width: 768px) {
+    nav ul { flex-direction: column; }
+    nav a { padding: 0.75rem 1.25rem; border-bottom: none; border-left: 3px solid transparent; }
+    nav a:hover { border-left-color: #d4af37; border-bottom-color: transparent; }
+    header h1 { font-size: 1.75rem; }
+    main { padding: 1.5rem 1rem; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+    #kpi-cards { flex-direction: column; }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 { font-size: 1.5rem; }
+    main { padding: 1rem; }
+    section { padding: 1.25rem; }
+}
+
+:focus { outline: 2px solid #d4af37; outline-offset: 2px; }
+
+/* ============================================
+   DARK MODE STYLES — JavaScript Part 3
+   ============================================ */
+body.dark-mode {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+}
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer,
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode fieldset {
+    background-color: #333333;
+    color: #f0f0f0;
+    border-color: #666;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode td,
+body.dark-mode th,
+body.dark-mode label {
+    color: #f0f0f0;
+}
+body.dark-mode a { color: #6ab4d8; }
+body.dark-mode table, body.dark-mode th, body.dark-mode td {
+    border-color: #666;
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+}
+body.dark-mode .kpi-card {
+    background: #444;
+    border-color: #888;
+}
+body.dark-mode .kpi-num { color: #d4af37; }
+body.dark-mode .kpi-label { color: #ccc; }
+body.dark-mode input, body.dark-mode select, body.dark-mode textarea {
+    background-color: #444444;
+    color: #f0f0f0;
+    border: 1px solid #888;
+}

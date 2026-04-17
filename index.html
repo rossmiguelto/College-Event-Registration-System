@@ -241,37 +241,46 @@
              to the SECRET_PASSWORD constant. If correct, #admin-panel becomes visible;
              if wrong, #password-error shows an error. The panel is hidden by default via
              inline style display:none. PASSWORD: CampusAdmin2026 -->
-        <section id="admin-login-section">
-            <h2>🔒 Admin Access</h2>
-            <p>Enter the administrator password to access the admin panel:</p>
-            <!-- PASSWORD HINT visible on page as required by rubric -->
-            <p style="font-size:0.85rem;color:#666;">
-                <em>Hint: Format is <strong>CampusName + Year</strong> (e.g. CampusAdmin2026)</em>
-            </p>
-            <input type="password" id="admin-password-input" placeholder="Enter admin password" size="30">
-            <button id="admin-login-btn" style="padding:5px 12px;cursor:pointer;">Unlock</button>
-            <span id="password-error" style="margin-left:10px;"></span>
+        <!-- COMPONENT 6 — ADMIN LOGIN (FIXED FOR FLASK) -->
+<section id="admin-login-section">
+    <h2>🔒 Admin Access</h2>
+    <p>Enter the administrator password to access the admin panel:</p>
 
-            <!-- Admin panel is hidden until the correct password is entered -->
-            <div id="admin-panel" style="display:none; background:#e8f4e8; border:2px solid green;
-                 padding:16px; margin-top:14px; border-radius:6px;">
-                <h3>✅ Admin Panel — Restricted Access</h3>
-                <p><strong>Total Registrations This Week:</strong> 142</p>
-                <p><strong>Events Pending Approval:</strong> 3</p>
-                <p><strong>System Status:</strong> <span style="color:green;">● Operational</span></p>
-                <ul>
-                    <li>View full registration database</li>
-                    <li>Export CSV reports</li>
-                    <li>Manage event listings</li>
-                    <li>Send mass notifications</li>
-                </ul>
-                <p><em>Admin panel loaded at: <span id="admin-time"></span></em></p>
-                <script>
-                    // Inline script to show the timestamp when admin panel opens
-                    document.getElementById("admin-time").textContent = new Date().toLocaleString();
-                </script>
-            </div>
-        </section>
+    <p style="font-size:0.85rem;color:#666;">
+        <em>Hint: Format is <strong>CampusName + Year</strong> (e.g. CampusAdmin2026)</em>
+    </p>
+
+    <!-- ✅ MATCHES your JS (login function) -->
+    <input type="password" id="password" placeholder="Enter admin password" size="30">
+
+    <!-- ✅ Calls Flask login -->
+    <button onclick="login()" type="button" style="padding:5px 12px;cursor:pointer;">
+        Login
+    </button>
+
+    <!-- ❌ REMOVE old system elements -->
+    <!-- Removed: Unlock button, error span tied to old JS -->
+
+    <!-- Admin panel is hidden until the correct password is entered -->
+    <div id="admin-panel" style="display:none; background:#e8f4e8; border:2px solid green;
+         padding:16px; margin-top:14px; border-radius:6px;">
+        <h3>✅ Admin Panel — Restricted Access</h3>
+        <p><strong>Total Registrations This Week:</strong> 142</p>
+        <p><strong>Events Pending Approval:</strong> 3</p>
+        <p><strong>System Status:</strong> <span style="color:green;">● Operational</span></p>
+        <ul>
+            <li>View full registration database</li>
+            <li>Export CSV reports</li>
+            <li>Manage event listings</li>
+            <li>Send mass notifications</li>
+        </ul>
+        <p><em>Admin panel loaded at: <span id="admin-time"></span></em></p>
+
+        <script>
+            document.getElementById("admin-time").textContent = new Date().toLocaleString();
+        </script>
+    </div>
+</section>
     </main>
 
     <!-- FOOTER BLOCK ELEMENT: Contains contact information and site information -->

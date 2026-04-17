@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Story Map — CERS Part 5</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 960px; margin: 0 auto; padding: 2rem; color: #1a1a1a; background: #fef8e7; }
+        h1 { color: #d4af37; border-bottom: 3px solid #d4af37; padding-bottom: 0.5rem; }
+        h2 { color: #1a1a1a; margin-top: 2rem; }
+        h3 { color: #b8860b; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th { background: linear-gradient(135deg, #d4af37, #f0c25e); padding: 0.75rem; text-align: left; border: 2px solid #1a1a1a; }
+        td { padding: 0.75rem; border: 1px solid #d4af37; background: #fff; vertical-align: top; }
+        .backbone { background: #1a1a1a; color: #d4af37; font-weight: bold; text-align: center; padding: 0.5rem; }
+        .activity { background: #d4af37; font-weight: 600; text-align: center; padding: 0.5rem; }
+        .story-card { background: #fffaeb; border: 2px solid #d4af37; padding: 0.5rem 0.75rem; margin: 0.25rem 0; border-radius: 4px; font-size: 0.9rem; }
+        .persona-box { background: #fff; border: 3px solid #d4af37; padding: 1.25rem; margin-bottom: 1.5rem; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        pre { background: #1a1a1a; color: #f5e6c8; padding: 1.25rem; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+
+<h1>CERS Part 5 — User Story Map &amp; Setup Guide</h1>
+<p><strong>College Event Registration System</strong> · Ross Miguel Luna &amp; Arash Nail · Red Deer Polytechnic</p>
+
+<!-- ============================================================
+     DESCRIBE THE USER (Rubric Item 1)
+     ============================================================ -->
+<h2>1. User Description</h2>
+
+<div class="persona-box">
+    <h3>Primary User: College Student (Registrant)</h3>
+    <p>
+        A full-time or part-time student at Red Deer Polytechnic, aged 18–28,
+        comfortable with smartphones and web browsers. They want a quick, 
+        frustration-free way to sign up for campus events without paperwork.
+        They check the dashboard occasionally to confirm their registration went through.
+    </p>
+    <p><strong>Goals:</strong> Browse events → register in under 2 minutes → see confirmation.</p>
+    <p><strong>Pain Points:</strong> Long paper forms, no confirmation receipt, not knowing if they got a spot.</p>
+</div>
+
+<div class="persona-box">
+    <h3>Secondary User: Department Administrator (Analyst)</h3>
+    <p>
+        A college staff member responsible for event planning, aged 25–50.
+        They need to monitor registration counts, spot the most popular events,
+        and track day-to-day engagement without exporting spreadsheets manually.
+    </p>
+    <p><strong>Goals:</strong> See live registration stats → identify popular events → ask data questions quickly.</p>
+    <p><strong>Pain Points:</strong> Manually counting registrations, no real-time overview, digging through raw database rows.</p>
+</div>
+
+<!-- ============================================================
+     USER STORY MAP (Rubric Item 2)
+     ============================================================ -->
+<h2>2. User Story Map</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="5" class="backbone">BACKBONE — User Journey</th>
+        </tr>
+        <tr>
+            <th class="activity">1. Discover Events</th>
+            <th class="activity">2. Register</th>
+            <th class="activity">3. Confirm</th>
+            <th class="activity">4. Monitor (Admin)</th>
+            <th class="activity">5. Analyse (Admin)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div class="story-card">As a student, I want to browse upcoming events on the home page so I can decide which one to attend.</div>
+                <div class="story-card">As a student, I want to search events by keyword so I find what I care about fast.</div>
+            </td>
+            <td>
+                <div class="story-card">As a student, I want to fill in my name and email on a form so the system knows who I am.</div>
+                <div class="story-card">As a student, I want to select an event from a dropdown so I don't mistype the event name.</div>
+                <div class="story-card">As a student, I want the form to tell me if I forgot a required field before submitting.</div>
+            </td>
+            <td>
+                <div class="story-card">As a student, I want to see an alert confirming my registration was saved to the database.</div>
+                <div class="story-card">As a student, I want to be redirected to the dashboard after registering so I can see my entry.</div>
+            </td>
+            <td>
+                <div class="story-card">As an admin, I want to see a table of all registrations with names, events, and dates so I have a live audit trail.</div>
+                <div class="story-card">As an admin, I want KPI cards showing totals so I get the key numbers at a glance.</div>
+            </td>
+            <td>
+                <div class="story-card">As an admin, I want a bar chart of registrations by event so I can see which events are most popular.</div>
+                <div class="story-card">As an admin, I want a line chart of daily registrations so I can see engagement trends over time.</div>
+                <div class="story-card">As an admin, I want to filter the bar chart by minimum count so I can hide low-traffic events.</div>
+                <div class="story-card">As an admin, I want to ask a chatbot plain-English questions and get live database answers.</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" style="background:#fffaeb;font-size:0.875rem;color:#555;padding:0.75rem;">
+                <strong>Walking Skeleton (MVP):</strong> Home page → Form → SQLite save → Dashboard table<br>
+                <strong>Release 1:</strong> + KPI cards + bar chart + line chart (Flask/Python)<br>
+                <strong>Release 2:</strong> + Chart filter dropdown (JS amends visual) + chatbot tool
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- ============================================================
+     INSTRUCTIONS TO RUN (Rubric Item 3)
+     ============================================================ -->
+<h2>3. Instructions to Run</h2>
+
+<h3>Prerequisites</h3>
+<ul>
+    <li>Python 3.10 or newer — <a href="https://www.python.org/downloads/" target="_blank">python.org</a></li>
+    <li>Visual Studio Code with the <strong>Live Server</strong> extension (optional — Flask can serve everything)</li>
+</ul>
+
+<h3>Step-by-step</h3>
+<ol>
+    <li>Open the project folder in VS Code: <code>File → Open Folder → CERS_Part5</code></li>
+    <li>Open a new terminal: <code>Terminal → New Terminal</code></li>
+    <li>
+        Install Python packages:
+        <pre>pip install -r requirements.txt</pre>
+    </li>
+    <li>
+        Start Flask:
+        <pre>python app.py</pre>
+        You should see:
+        <pre>✅ Database initialized.
+🚀 Flask server starting at http://localhost:5000</pre>
+    </li>
+    <li>
+        Open your browser and navigate to:
+        <pre>http://localhost:5000</pre>
+        The full site is served by Flask — no Live Server needed.
+    </li>
+    <li>
+        To test the registration form: go to <strong>Register for Events</strong>,
+        fill in the form, and click <strong>Submit Registration</strong>.
+        You will be redirected to the Dashboard where your entry appears in the table
+        and the charts refresh automatically.
+    </li>
+    <li>
+        To test the chatbot: on the Dashboard, type a question like
+        <em>"How many registrations are there?"</em> and press Enter or click <strong>Ask</strong>.
+    </li>
+</ol>
+
+<h3>HTTP Status Codes from Terminal (Rubric Item 6b)</h3>
+<p>After submitting a registration and loading the dashboard, your terminal will show lines like:</p>
+<pre>127.0.0.1 - - [08/Apr/2026 10:24:01] "POST /api/register HTTP/1.1" 201 -
+127.0.0.1 - - [08/Apr/2026 10:24:02] "GET /dashboard.html HTTP/1.1" 200 -
+127.0.0.1 - - [08/Apr/2026 10:24:02] "GET /api/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [08/Apr/2026 10:24:02] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [08/Apr/2026 10:24:03] "GET /api/charts/events HTTP/1.1" 200 -
+127.0.0.1 - - [08/Apr/2026 10:24:03] "GET /api/charts/timeline HTTP/1.1" 200 -</pre>
+
+<p><strong>200 OK</strong> — The request succeeded; the server returned the requested resource (HTML page, JSON data, or PNG chart image).</p>
+<p><strong>201 Created</strong> — The POST /api/register request succeeded and a new row was inserted into the database. 201 is more precise than 200 for creation operations.</p>
+<p><strong>400 Bad Request</strong> — Returned if the form submission is missing required fields (username, email, or event_name). Tells the client to fix its request.</p>
+<p><strong>500 Internal Server Error</strong> — Returned if the database connection fails or an unhandled exception occurs server-side. Indicates a server-side problem, not a client problem.</p>
+
+</body>
+</html>
